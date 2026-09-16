@@ -1,5 +1,34 @@
 # Mind of Lydia
 
+The first version of the blog is a GitHub Pages site with Home, Motherhood,
+The Lydia Rating, About, and Contact pages. Posts are Markdown files in
+`_posts/`; the site is styled in `assets/css/style.css`.
+
+## Publishing a post
+
+Add a file named `YYYY-MM-DD-post-title.md` in `_posts/`. Start it with:
+
+```yaml
+---
+layout: post
+title: Your post title
+category: motherhood
+description: A short description for search results.
+---
+```
+
+Write the post below that header. Use `category: the-lydia-rating` for a review.
+Commit to `main` to publish. The workflow in `.github/workflows/pages.yml`
+builds and deploys the site. In the repository's **Settings → Pages**, select
+**GitHub Actions** as the build and deployment source before the first deploy.
+
+The domain purchased through Vercel can be connected after the GitHub Pages
+site is live. Set the custom domain in GitHub Pages, then update the domain's
+DNS records in Vercel to match GitHub's instructions. Do not change DNS before
+confirming the exact domain and its current records.
+When the custom domain is active, change `baseurl` in `_config.yml` from
+`/mindoflydia` to an empty string so links point to the domain root.
+
 **Real life. Honest motherhood. Inspired living.**
 
 Mind of Lydia is Lydia Rim's personal editorial platform for honest motherhood,

@@ -1,0 +1,9 @@
+title: Mind of Lydia
+description: Real life. Honest motherhood. Inspired living.
+url: ""
+baseurl: "/mindoflydia"
+permalink: /:categories/:title/
+timezone: America/New_York
+markdown: kramdown
+exclude:
+  - README.md
