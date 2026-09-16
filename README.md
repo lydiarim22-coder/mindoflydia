@@ -1,0 +1,86 @@
+# Mind of Lydia
+
+**Real life. Honest motherhood. Inspired living.**
+
+Mind of Lydia is Lydia Rim's personal editorial platform for honest motherhood,
+mental wellness, Maryland real estate, food and product reviews, faith, travel,
+photography, original designs, and family projects.
+
+## Mission
+
+Mind of Lydia helps mothers feel seen, encouraged, and inspired through honest
+stories about family life, mental wellness, faith, work, and creativity. It also
+connects readers with Maryland real-estate guidance, memorable food and travel,
+and Lydia's original products.
+
+Mental-health writing reflects personal experience and general encouragement;
+it is not medical advice or a substitute for care from a qualified professional.
+
+## Content pillars
+
+- Motherhood and family life
+- Mental wellness
+- Maryland homes, with an emphasis on Howard County
+- The Lydia Rating for restaurants, snacks, and products
+- Faith and everyday life
+- Travel and photography
+- Purple Cloth Shop apparel
+- Purple Print Shop journals, sketchbooks, and print products
+- Projects We Love
+
+## Planned site sections
+
+- Home
+- Motherhood
+- Mental Wellness
+- Maryland Homes
+- The Lydia Rating
+- Travel
+- Faith & Life
+- Shop
+- Projects We Love
+- About
+- Contact
+
+## The Lydia Rating
+
+Restaurant reviews consider taste, service, atmosphere, value, and
+family-friendliness. Product reviews consider quality, ease of use, value,
+design, and usefulness. Snack reviews can also distinguish between a parent's
+perspective and the children's anonymous responses. Reviews conclude with an
+overall rating and a clear answer to either “Would I return?” or “Would I buy it
+again?”
+
+Reviews will identify whether an item was purchased, gifted, sponsored, linked
+through an affiliate program, or created and sold by Lydia.
+
+## Privacy principles
+
+- Protect the children's names, schools, schedules, and regular locations.
+- Avoid real-time travel updates and identifying family photographs.
+- Publish only flattened, privacy-checked copies of edited photos.
+- Moderate every comment before it becomes public.
+- Ask permission before featuring family stories or projects.
+
+## Initial editorial plan
+
+1. Why I Created Mind of Lydia After Burnout
+2. What Raising Four Children Has Taught Me About Giving Myself Grace
+3. The Lydia Rating: My First Maryland Restaurant Review
+4. How I Balance Motherhood, Real Estate, and Creative Work
+5. What Maryland Homebuyers Should Prepare Before Starting Their Search
+
+## Business links
+
+- [Lydia Rim — Coldwell Banker Realty](https://lydiarim.sites.cbmoxi.com/)
+- [Purple Print Shop on Amazon](https://www.amazon.com/stores/Purple-Print-Shop/author)
+
+Purple Cloth Shop products will be featured through their individual Amazon
+product links.
+
+## Visual direction
+
+The brand uses a soft, elegant editorial style with lavender, blush, cream,
+sage, deep plum, and charcoal. Original food, home, garden, product, nature, and
+travel photography will be combined with occasional portraits and branded quote
+graphics for the website, Facebook, and Instagram.
