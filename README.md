@@ -1,6 +1,6 @@
 # Mind of Lydia
 
-The first version of the blog is a GitHub Pages site with Home, Motherhood,
+The first version of the blog is a GitHub Pages site with Home, Motherhood, Education,
 The Lydia Rating, About, and Contact pages. Posts are Markdown files in
 `_posts/`; the site is styled in `assets/css/style.css`.
 
@@ -17,7 +17,7 @@ description: A short description for search results.
 ---
 ```
 
-Write the post below that header. Use `category: the-lydia-rating` for a review.
+Write the post below that header. Use `category: the-lydia-rating` for a review or `category: education` for an education post.
 Commit to `main` to publish. The workflow in `.github/workflows/pages.yml`
 builds and deploys the site. In the repository's **Settings → Pages**, select
 **GitHub Actions** as the build and deployment source before the first deploy.

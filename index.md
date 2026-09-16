@@ -26,6 +26,6 @@ title: Home
 <section class="feature-band">
   <div class="shell feature-inner">
     <div><p class="eyebrow">Thoughtful, personal, practical</p><h2>Find your corner.</h2></div>
-    <div class="feature-links"><a href="{{ '/motherhood/' | relative_url }}">Motherhood <span aria-hidden="true">→</span></a><a href="{{ '/the-lydia-rating/' | relative_url }}">The Lydia Rating <span aria-hidden="true">→</span></a></div>
+    <div class="feature-links"><a href="{{ '/motherhood/' | relative_url }}">Motherhood <span aria-hidden="true">→</span></a><a href="{{ '/education/' | relative_url }}">Education <span aria-hidden="true">&rarr;</span></a><a href="{{ '/the-lydia-rating/' | relative_url }}">The Lydia Rating <span aria-hidden="true">→</span></a></div>
   </div>
 </section>
