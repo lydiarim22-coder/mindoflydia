@@ -1,7 +1,7 @@
 title: Mind of Lydia
 description: Real life. Honest motherhood. Inspired living.
-url: ""
-baseurl: "/mindoflydia"
+url: "https://mindoflydia.com"
+baseurl: ""
 permalink: /:categories/:title/
 timezone: America/New_York
 markdown: kramdown

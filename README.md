@@ -22,12 +22,8 @@ Commit to `main` to publish. The workflow in `.github/workflows/pages.yml`
 builds and deploys the site. In the repository's **Settings → Pages**, select
 **GitHub Actions** as the build and deployment source before the first deploy.
 
-The domain purchased through Vercel can be connected after the GitHub Pages
-site is live. Set the custom domain in GitHub Pages, then update the domain's
-DNS records in Vercel to match GitHub's instructions. Do not change DNS before
-confirming the exact domain and its current records.
-When the custom domain is active, change `baseurl` in `_config.yml` from
-`/mindoflydia` to an empty string so links point to the domain root.
+The site uses the custom domain `mindoflydia.com`. Its GitHub Pages custom-domain
+file is `CNAME`, and `_config.yml` generates links from the domain root.
 
 **Real life. Honest motherhood. Inspired living.**
 
