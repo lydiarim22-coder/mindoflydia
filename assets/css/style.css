@@ -59,3 +59,7 @@ h3{font-size:25px;margin:10px 0 14px}
 .footer-inner p{margin:0}
 @media(max-width:800px){.header-inner{padding-block:22px;align-items:flex-start;flex-direction:column}nav{gap:10px 20px}.hero-inner{min-height:520px}.post-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.feature-inner{align-items:flex-start;flex-direction:column}}
 @media(max-width:560px){.shell{width:min(100% - 32px,1120px)}.brand{font-size:25px}nav a{font-size:11px}.hero-inner{min-height:470px;padding-block:55px}.hero-copy{font-size:17px}.section{padding-block:58px 72px}.post-grid{grid-template-columns:1fr}.post-card{min-height:220px}.page-intro{padding-block:60px 38px}.article{padding-block:45px 70px}.prose{font-size:17px}}
+
+/* Expanded section navigation and story lists. */
+.header-inner{padding-block:24px;align-items:flex-start;flex-direction:column}
+.section-stories{margin-top:36px}

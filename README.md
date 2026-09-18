@@ -1,7 +1,6 @@
 # Mind of Lydia
 
-The first version of the blog is a GitHub Pages site with Home, Motherhood, Education,
-The Lydia Rating, About, and Contact pages. Posts are Markdown files in
+The blog is a GitHub Pages site with all sections listed below. Posts are Markdown files in
 `_posts/`; the site is styled in `assets/css/style.css`.
 
 ## Publishing a post
@@ -53,10 +52,11 @@ it is not medical advice or a substitute for care from a qualified professional.
 - Purple Print Shop journals, sketchbooks, and print products
 - Projects We Love
 
-## Planned site sections
+## Site sections
 
 - Home
 - Motherhood
+- Education
 - Mental Wellness
 - Maryland Homes
 - The Lydia Rating
@@ -109,3 +109,9 @@ The brand uses a soft, elegant editorial style with lavender, blush, cream,
 sage, deep plum, and charcoal. Original food, home, garden, product, nature, and
 travel photography will be combined with occasional portraits and branded quote
 graphics for the website, Facebook, and Instagram.
+
+## Section categories
+
+New section pages automatically list posts with these categories:
+mental-wellness, maryland-homes, travel, faith-and-life, shop, and projects-we-love.
+Use the existing motherhood, education, and the-lydia-rating categories for those sections.
