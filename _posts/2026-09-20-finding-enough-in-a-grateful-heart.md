@@ -1,9 +1,11 @@
 ---
 layout: post
-title: "When You Are Grateful for What You Have, You Have Everything You Need"
+title: "Finding Enough in a Grateful Heart"
 category: faith-and-life
 description: "A reflection on gratitude, faith, and noticing the goodness already present in an unfinished, ordinary life."
 ---
+> When you are grateful for what you have, you have everything you need.
+
 There is something comforting about those words. They invite us to pause before reaching for the next thing and take a closer look at the life already in front of us.
 
 It is easy to imagine that peace is waiting on the other side of something: a cleaner house, a little more money, an answered prayer, a season when everyone needs a little less from us. We can spend so much time looking ahead that today becomes something we are simply trying to get through.
