@@ -63,3 +63,5 @@ h3{font-size:25px;margin:10px 0 14px}
 /* Expanded section navigation and story lists. */
 .header-inner{padding-block:24px;align-items:flex-start;flex-direction:column}
 .section-stories{margin-top:36px}
+
+.prose a.button{color:white;text-decoration:none}
