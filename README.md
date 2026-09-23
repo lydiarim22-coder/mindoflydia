@@ -115,3 +115,9 @@ graphics for the website, Facebook, and Instagram.
 New section pages automatically list posts with these categories:
 mental-wellness, maryland-homes, travel, faith-and-life, shop, and projects-we-love.
 Use the existing motherhood, education, and the-lydia-rating categories for those sections.
+
+## Search optimization
+
+See [SEO-PLAN.md](SEO-PLAN.md) for account setup, content priorities, and image
+guidelines. Every deployment checks the built site's metadata, structured data,
+sitemap, and internal links with scripts/check_seo.py before publishing.

@@ -1,6 +1,7 @@
 ---
 layout: default
-title: The Lydia Rating
+title: 'The Lydia Rating: Food & Product Reviews'
+description: 'Learn how Lydia Rim approaches restaurant, snack, and product reviews, including value, family-friendliness, and purchase and sponsorship disclosures.'
 permalink: /the-lydia-rating/
 ---
 <section class="page-intro shell"><p class="eyebrow">Reviews with a point of view</p><h1>The Lydia Rating</h1><p>Food, snacks, and products considered with care—and a clear answer to whether I would return or buy again.</p></section>

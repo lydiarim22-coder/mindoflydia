@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Motherhood
+title: 'Motherhood Stories & Family Life'
+description: 'Honest, funny motherhood stories by Lydia Rim about family life, endless snacks, everyday interruptions, and making room for grace.'
 permalink: /motherhood/
 ---
 <section class="page-intro shell"><p class="eyebrow">The journal</p><h1>Motherhood</h1><p>Stories about family life, learning as we go, and making room for grace.</p></section>

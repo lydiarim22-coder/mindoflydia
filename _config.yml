@@ -1,11 +1,29 @@
 title: Mind of Lydia
-description: Real life. Honest motherhood. Inspired living.
+tagline: Motherhood, Education & Inspired Living
+description: "Honest motherhood stories, college-planning resources for parents, and reflections on faith and everyday family life by Lydia Rim."
 url: "https://mindoflydia.com"
 baseurl: ""
 permalink: /:categories/:title/
 timezone: America/New_York
+lang: en-US
+locale: en_US
 markdown: kramdown
+author:
+  name: Lydia Rim
+  url: https://mindoflydia.com/about/
+  type: Person
 exclude:
   - README.md
+  - SEO-PLAN.md
+  - scripts
+  - _project-notes
 plugins:
+  - jekyll-seo-tag
   - jekyll-sitemap
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      seo:
+        type: BlogPosting

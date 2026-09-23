@@ -20,6 +20,8 @@ jobs:
         with:
           source: ./
           destination: ./_site
+      - name: Check rendered SEO and internal links
+        run: python3 scripts/check_seo.py _site
       - uses: actions/upload-pages-artifact@v3
   deploy:
     environment:

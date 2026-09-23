@@ -1,6 +1,7 @@
 ---
 layout: default
-title: About
+title: 'About Lydia Rim'
+description: 'Meet Lydia Rim, the writer behind Mind of Lydia: honest stories about motherhood, education, faith, creativity, and everyday family life.'
 permalink: /about/
 ---
 <section class="page-intro shell"><p class="eyebrow">Meet Lydia</p><h1>About Mind of Lydia</h1><p>Welcome. I’m Lydia Rim, and this is my space for honest motherhood, inspired living, and the everyday things worth sharing.</p></section>

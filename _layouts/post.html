@@ -1,10 +1,31 @@
 ---
 layout: default
 ---
+{% assign section_url = '/' | append: page.category | append: '/' %}
+{% assign section_page = site.pages | where: 'url', section_url | first %}
+{% assign section_name = section_page.title | default: page.category %}
 <article class="shell article">
-  <a class="back-link" href="{{ '/' | relative_url }}">← Back to home</a>
-  <p class="eyebrow">{{ page.category | default: 'Journal' | replace: '-', ' ' }}</p>
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="{{ '/' | relative_url }}">Home</a></li>
+      <li><a href="{{ section_url | relative_url }}">{{ section_name | escape }}</a></li>
+      <li aria-current="page">{{ page.title | escape }}</li>
+    </ol>
+  </nav>
+  <p class="eyebrow">{{ section_name | escape }}</p>
   <h1>{{ page.title | escape }}</h1>
-  <p class="post-meta">By Lydia Rim · {{ page.date | date: '%B %-d, %Y' }}</p>
+  <p class="post-meta">By <a href="{{ '/about/' | relative_url }}" rel="author">{{ site.author.name | escape }}</a> &middot; <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time>{% if page.last_modified_at %} &middot; Updated <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ page.last_modified_at | date: '%B %-d, %Y' }}</time>{% endif %}</p>
   <div class="prose">{{ content }}</div>
+  {% assign related_posts = site.posts | where: 'category', page.category | where_exp: 'post', 'post.url != page.url' %}
+  <aside class="related-stories" aria-labelledby="related-title">
+    <h2 id="related-title">More from {{ section_name | escape }}</h2>
+    {% if related_posts.size > 0 %}
+    <ul>
+      {% for post in related_posts limit: 3 %}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    <p><a href="{{ section_url | relative_url }}">Explore {{ section_name | escape }}</a> &middot; <a href="{{ '/journal/' | relative_url }}">Browse all stories</a></p>
+  </aside>
 </article>

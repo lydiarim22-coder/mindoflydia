@@ -1,12 +1,13 @@
 ---
 layout: default
-title: Home
+title: 'Motherhood, Education & Inspired Living'
+description: 'Honest motherhood stories, college-planning resources for parents, and reflections on faith and everyday family life by Lydia Rim.'
 ---
 <section class="hero">
   <div class="shell hero-inner">
     <p class="eyebrow">Welcome to Mind of Lydia</p>
     <h1>Real life.<br><em>Honest motherhood.</em><br>Inspired living.</h1>
-    <p class="hero-copy">A place for stories about family, the small moments that matter, and honest reviews that help you choose what is worth your time.</p>
+    <p class="hero-copy">Honest motherhood stories, college-planning resources for parents, and reflections on faith and everyday family life, by Lydia Rim.</p>
     <a class="button" href="{{ '/motherhood/' | relative_url }}">Explore motherhood stories <span aria-hidden="true">→</span></a>
   </div>
 </section>
@@ -22,6 +23,7 @@ title: Home
       </article>
     {% endfor %}
   </div>
+  <p><a class="text-link" href="{{ '/journal/' | relative_url }}">Browse all stories &rarr;</a></p>
 </section>
 <section class="feature-band">
   <div class="shell feature-inner">

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Education
+title: 'College Planning & Education for Parents'
 permalink: /education/
-description: Reflections, practical ideas, and resources to support our children's education and nurture a lifelong love of learning.
+description: 'Explore parent-friendly guides to CLEP exams, AAU universities, and Brown University''s Open Curriculum, with questions to help families consider college fit.'
 ---
-<section class="page-intro shell"><p class="eyebrow">The journal</p><h1>Education</h1><p>Learning is part of everyday life, from questions around the kitchen table to new discoveries in the classroom. Here, I'll share reflections, practical ideas, and resources to support our children's education and nurture a lifelong love of learning.</p></section>
+<section class="page-intro shell"><p class="eyebrow">The journal</p><h1>College planning and education for parents</h1><p>College planning comes with unfamiliar terms and plenty of questions. These parent-friendly guides explore college fit, university learning environments, and credit options, with links to official sources and questions to discuss as a family.</p></section>
 <section class="shell section compact">
 {% assign education_posts = site.posts | where: 'category', 'education' %}
 {% if education_posts.size > 0 %}
