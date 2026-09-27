@@ -97,6 +97,16 @@
       }).bindTooltip(elementWithText(place.name), { direction: 'top', offset: [0, -16] });
       marker.on('click', () => showPlace(place));
       marker.addTo(markerGroup);
+      const pin = marker.getElement();
+      pin.setAttribute('role', 'button');
+      pin.setAttribute('aria-label', `${place.name}, ${place.location} — ${labels[place.type]}`);
+      pin.addEventListener('keydown', event => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          event.stopPropagation();
+          showPlace(place);
+        }
+      });
       markers.set(place.id, marker);
     });
     clearDetails();
