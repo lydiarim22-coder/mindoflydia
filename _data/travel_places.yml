@@ -1,0 +1,9 @@
+# Publish only locations approved by Lydia; see README.md for the format.
+- id: niagara-falls-ny
+  name: Niagara Falls
+  location: New York, United States
+  country: USA
+  type: past
+  latitude: 43.093
+  longitude: -79.058
+  summary: "A past-trip destination in New York, on the U.S. side of Niagara Falls."

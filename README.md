@@ -121,3 +121,51 @@ Use the existing motherhood, education, and the-lydia-rating categories for thos
 See [SEO-PLAN.md](SEO-PLAN.md) for account setup, content priorities, and image
 guidelines. Every deployment checks the built site's metadata, structured data,
 sitemap, and internal links with scripts/check_seo.py before publishing.
+
+## Interactive travel map
+
+The `/travel/` page includes a world map with three categories: past trips,
+wish-list destinations, and The Lydia Rating locations. It supports country
+selection, place search, category filters, keyboard navigation, and a location
+list that remains readable when JavaScript or the map fails.
+
+Locations live in `_data/travel_places.yml`. Add only places Lydia has approved.
+Past trips use city-level coordinates and are shared after the trip; never add
+current itineraries, children's regular locations, private addresses, or invented
+ratings, experiences, photos, or visit dates. Review locations can use the public
+business location after Lydia identifies the business.
+
+Example format (replace the example values before publishing):
+
+```yaml
+- id: unique-place-slug
+  name: Place name
+  location: City or region, country
+  country: USA
+  type: past
+  latitude: 43.093
+  longitude: -79.058
+  summary: A short, factual description approved by Lydia.
+  # Optional fields; omit until a real story/photo/rating exists:
+  # url: /travel/existing-story-slug/
+  # image: /assets/images/privacy-checked-photo.jpg
+  # image_alt: Describe the actual photo.
+  # rating: "4 / 5"
+```
+
+Use `past`, `wishlist`, or `rating` for `type`. `country` matches the `code` in
+`assets/data/travel-countries.geojson` (Natural Earth ADM0_A3). Ratings are display
+text so the author's chosen scale is preserved; no default score is assigned.
+An entry without a story URL remains a usable map marker and location card.
+Travel posts continue to use `category: travel` and appear below the map.
+
+The initial approved destination is Niagara Falls, New York (past trip). Its
+approximate city marker is based on Apple Maps' public city coordinates, rounded
+to three decimals: https://maps.apple.com/place?auid=6795005031452489393 . No travel
+date or personal review was supplied.
+
+Leaflet 1.9.4 and Natural Earth's public-domain world outlines are served locally.
+There is no geolocation request, mapping API key, live tile service, or paid map
+subscription. The map is a destination overview, not street-level directions.
+Source attribution and license information are in `assets/data/README.txt` and
+`assets/vendor/leaflet/LICENSE`.
