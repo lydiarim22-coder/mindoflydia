@@ -138,9 +138,11 @@
       geo.features.slice().sort((a, b) => a.properties.name.localeCompare(b.properties.name)).forEach(feature => {
         countrySelect.add(new Option(feature.properties.name, feature.properties.code));
       });
+      root.querySelector('.travel-map-frame').hidden = false;
       map = L.map('travel-map', { crs: L.CRS.EPSG4326, minZoom: 0, maxZoom: 5,
         zoomSnap: 0.25, zoomDelta: 0.5, scrollWheelZoom: false, maxBounds: [[-90, -210], [90, 210]],
         maxBoundsViscosity: 0.8, zoomAnimation: !reducedMotion, fadeAnimation: !reducedMotion });
+      map.fitBounds(worldBounds, { padding: [15, 15], animate: false });
       map.attributionControl.addAttribution('Map data: <a href="https://www.naturalearthdata.com/">Natural Earth</a>');
       countries = L.geoJSON(geo, { style: countryStyle, onEachFeature(feature, layer) {
         layers.set(feature.properties.code, layer);
@@ -171,6 +173,8 @@
       root.dataset.mapReady = 'true';
     } catch (error) {
       if (map) map.remove();
+      root.querySelector('.travel-map-frame').hidden = true;
+      root.dataset.mapError = error.message;
       controls.hidden = true;
       cards.forEach(card => { card.hidden = false; });
       root.querySelectorAll('[data-show-place]').forEach(button => { button.hidden = true; });

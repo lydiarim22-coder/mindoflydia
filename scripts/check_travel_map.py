@@ -144,6 +144,7 @@ with sync_playwright() as p:
         page.screenshot(path=str(output / 'travel-failure.png'), full_page=True)
         print('Map status:', page.locator('[data-travel-status]').inner_text())
         print('Browser errors:', errors)
+        print('Map error:', page.locator('[data-travel-explorer]').get_attribute('data-map-error'))
         raise
     finally:
         browser.close()
