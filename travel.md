@@ -29,7 +29,7 @@ travel_map: true
       <button type="button" class="travel-reset" data-travel-reset>Reset map</button>
     </div>
   </div>
-  <p class="travel-status" role="status" aria-live="polite" data-travel-status>Loading the world map&hellip;</p>
+  <p class="travel-status" role="status" aria-live="polite" data-travel-status>Turn on JavaScript to explore the map. Shared places and travel stories are also listed below.</p>
   <div class="travel-map-frame" hidden>
     <div id="travel-map" aria-label="Interactive travel map. Use the country selector or location list to explore with a keyboard."></div>
     <aside class="travel-detail" aria-labelledby="travel-detail-title">
@@ -40,7 +40,6 @@ travel_map: true
       <a class="text-link" data-detail-link hidden>Read the story &rarr;</a>
     </aside>
   </div>
-  <noscript><style>.travel-status{display:none}</style><p class="travel-notice">Turn on JavaScript to explore the map. Shared places and travel stories are also listed below.</p></noscript>
   <div class="travel-list-heading"><h3>Places to explore</h3><p data-travel-count></p></div>
   <div class="travel-places" data-travel-list>
     {% for place in site.data.travel_places %}

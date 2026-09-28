@@ -127,6 +127,7 @@
   }
 
   async function init() {
+    status.textContent = 'Loading the world map…';
     try {
       if (!window.L) throw new Error('Map library unavailable');
       places = JSON.parse(document.querySelector('#travel-places-data').textContent);

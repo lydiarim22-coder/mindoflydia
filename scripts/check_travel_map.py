@@ -137,7 +137,7 @@ with sync_playwright() as p:
         fallback = no_js.new_page()
         fallback.goto(base + '/travel/')
         expect(fallback.locator('[data-place-id="niagara-falls-ny"]')).to_be_visible()
-        expect(fallback.locator('noscript')).to_contain_text('Turn on JavaScript')
+        expect(fallback.locator('[data-travel-status]')).to_contain_text('Turn on JavaScript')
         no_js.close()
         print(f'Travel map checks passed: {len(places)} approved places; desktop, mobile, keyboard, filters, search, country selection, rating links, and failure/no-JS fallbacks.')
     except Exception:
