@@ -7,3 +7,13 @@
   latitude: 43.093
   longitude: -79.058
   summary: "A past-trip destination in New York, on the U.S. side of Niagara Falls."
+
+# City coordinates: https://ungegn.un.org/dashboard/cities/details?id=1721
+- id: cancun-mexico
+  name: Cancún
+  location: Mexico
+  country: MEX
+  type: past
+  latitude: 21.167
+  longitude: -86.833
+  summary: "A past-trip destination in Mexico."
