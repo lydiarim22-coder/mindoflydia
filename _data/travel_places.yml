@@ -27,3 +27,13 @@
   latitude: 32.717
   longitude: -117.163
   summary: "A past-trip destination in California."
+
+# City coordinates: https://ungegn.un.org/dashboard/cities/details?id=361
+- id: san-francisco-california
+  name: San Francisco
+  location: California, United States
+  country: USA
+  type: past
+  latitude: 37.775
+  longitude: -122.418
+  summary: "A past-trip destination in California."
