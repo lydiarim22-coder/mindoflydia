@@ -136,7 +136,7 @@
   function openLinkedTrip() {
     const id = window.location.hash.slice(1);
     const place = places.find(item => item.id === id);
-    if (!place) return;
+    if (!place) { render(); return; }
     search.value = '';
     countrySelect.value = '';
     activeFilter = 'all';
