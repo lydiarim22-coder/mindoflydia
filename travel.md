@@ -43,8 +43,15 @@ travel_map: true
     </aside>
   </div>
   <div class="travel-list-heading"><h3>Places to explore</h3><p data-travel-count></p></div>
-  <div class="travel-places" data-travel-list>
-    {% for place in site.data.travel_places %}
+  <div class="travel-groups" data-travel-list>
+    {% assign place_groups = site.data.travel_places | group_by: 'type' %}
+    {% assign group_types = 'past,wishlist,rating' | split: ',' %}
+    {% for group_type in group_types %}
+    {% for group in place_groups %}{% if group.name == group_type %}
+    <section class="travel-group" data-travel-group="{{ group_type }}" aria-labelledby="group-{{ group_type }}">
+      <h4 id="group-{{ group_type }}">{% case group_type %}{% when 'past' %}Past trips{% when 'wishlist' %}Wish list{% when 'rating' %}The Lydia Rating{% endcase %}</h4>
+      <div class="travel-places">
+    {% for place in group.items %}
     <article class="travel-place" id="{{ place.id | escape }}" data-place-id="{{ place.id | escape }}">
       {% if place.image %}<img src="{{ place.image | relative_url }}" alt="{{ place.image_alt | escape }}" width="640" height="400" loading="lazy">{% endif %}
       <div class="travel-place-copy">
@@ -56,6 +63,10 @@ travel_map: true
         <div class="travel-place-actions">{% if place.type == 'past' %}<a href="{{ '/photo-gallery/' | relative_url }}#{{ place.id | escape }}">View trip photos &rarr;</a>{% endif %}<button type="button" data-show-place="{{ place.id | escape }}" hidden>Show on map</button>{% if place.url %}<a href="{{ place.url | relative_url }}">{% if place.type == 'rating' %}Read the review{% else %}Read the story{% endif %} &rarr;</a>{% endif %}</div>
       </div>
     </article>
+    {% endfor %}
+      </div>
+    </section>
+    {% endif %}{% endfor %}
     {% endfor %}
   </div>
   <p class="travel-empty" data-travel-empty{% if site.data.travel_places.size > 0 %} hidden{% endif %}>The travel collection is just beginning. Past trips, wish-list places, and Lydia's reviews will appear here as they are shared. In the meantime, explore the world map.</p>

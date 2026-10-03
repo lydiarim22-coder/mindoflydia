@@ -53,3 +53,7 @@
 @media(max-width:1000px){.travel-map-frame{grid-template-columns:minmax(0,1fr) 220px}.travel-explorer{padding:24px}.travel-places{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.travel-intro{padding-block:45px 28px}.travel-intro>p:last-child{font-size:17px}.travel-explorer{padding:18px}.travel-heading{align-items:flex-start;flex-direction:column;gap:12px}.travel-heading h2{font-size:30px}.travel-search-row{grid-template-columns:1fr 1fr;gap:12px}.travel-search-row label:first-child{grid-column:1/-1}.travel-reset{width:100%}.travel-map-frame{grid-template-columns:1fr}#travel-map{height:340px}.travel-detail{border-left:0;border-top:1px solid var(--line);padding:22px}.travel-detail h3{font-size:26px;margin:10px 0}.travel-detail>p{margin-block:10px}.travel-places{grid-template-columns:1fr}.travel-filters button{padding:9px 12px;font-size:13px}.travel-list-heading{align-items:flex-start;flex-direction:column;gap:0}.travel-list-heading p{margin-top:4px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Destination lists grouped by past trips, wish list, and reviews. */
+.travel-group{margin-top:24px}
+.travel-group>h4{font:600 24px/1.2 'Playfair Display',Georgia,serif;color:var(--plum);margin:0;padding-bottom:12px;border-bottom:1px solid var(--line)}

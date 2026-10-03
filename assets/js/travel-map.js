@@ -94,6 +94,9 @@
       && normalize(`${place.name} ${place.location} ${place.summary} ${layers.get(place.country)?.feature.properties.name || ''}`).includes(query));
     const ids = new Set(visible.map(place => place.id));
     cards.forEach(card => { card.hidden = !ids.has(card.dataset.placeId); });
+    root.querySelectorAll('[data-travel-group]').forEach(group => {
+      group.hidden = ![...group.querySelectorAll('[data-place-id]')].some(card => !card.hidden);
+    });
     markerGroup.clearLayers();
     markers.clear();
     visible.forEach(place => {
@@ -199,6 +202,7 @@
       root.dataset.mapError = error.message;
       controls.hidden = true;
       cards.forEach(card => { card.hidden = false; });
+      root.querySelectorAll('[data-travel-group]').forEach(group => { group.hidden = false; });
       root.querySelectorAll('[data-show-place]').forEach(button => { button.hidden = true; });
       status.textContent = 'The map could not load. You can still browse the places and stories below. Please try reloading the page.';
       root.dataset.mapReady = 'failed';
