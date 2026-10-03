@@ -91,3 +91,12 @@
   latitude: 34.443
   longitude: -118.609
   summary: "A past-trip destination in Valencia, California."
+
+- id: paris-france
+  name: Paris
+  location: France
+  country: FRA
+  type: wishlist
+  latitude: 48.857
+  longitude: 2.352
+  summary: "A wish-list destination in France."
