@@ -100,3 +100,12 @@
   latitude: 48.857
   longitude: 2.352
   summary: "A wish-list destination in France."
+
+- id: switzerland
+  name: Switzerland
+  location: Switzerland
+  country: CHE
+  type: wishlist
+  latitude: 46.818
+  longitude: 8.228
+  summary: "A wish-list destination in Switzerland."
