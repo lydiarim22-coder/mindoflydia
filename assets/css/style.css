@@ -75,6 +75,6 @@ h3{font-size:25px;margin:10px 0 14px}
 .related-stories a,.post-meta a{text-underline-offset:3px}
 
 /* Clickable product photos on the Shop page. */
-.shop-product{display:block;width:100%;max-width:320px}
+.shop-product{display:block;width:100%;max-width:200px}
 .shop-product img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:4px}
 .shop-product span{display:block;margin-top:10px;font-weight:700}
