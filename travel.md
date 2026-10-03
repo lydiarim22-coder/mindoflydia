@@ -29,6 +29,7 @@ travel_map: true
       <button type="button" class="travel-reset" data-travel-reset>Reset map</button>
     </div>
   </div>
+  <p><a href="{{ '/photo-gallery/' | relative_url }}">Browse the Photo Gallery &rarr;</a></p>
   <p class="travel-status" role="status" aria-live="polite" data-travel-status>Turn on JavaScript to explore the map. Shared places and travel stories are also listed below.</p>
   <div class="travel-map-frame" hidden>
     <div id="travel-map" aria-label="Interactive travel map. Use the country selector or location list to explore with a keyboard."></div>
@@ -38,12 +39,13 @@ travel_map: true
       <p data-detail-description>Select a country to explore, or choose a shared place to see its story.</p>
       <p class="travel-detail-rating" data-detail-rating hidden></p>
       <a class="text-link" data-detail-link hidden>Read the story &rarr;</a>
+      <p><a class="text-link" data-detail-gallery hidden>View trip photos &rarr;</a></p>
     </aside>
   </div>
   <div class="travel-list-heading"><h3>Places to explore</h3><p data-travel-count></p></div>
   <div class="travel-places" data-travel-list>
     {% for place in site.data.travel_places %}
-    <article class="travel-place" data-place-id="{{ place.id | escape }}">
+    <article class="travel-place" id="{{ place.id | escape }}" data-place-id="{{ place.id | escape }}">
       {% if place.image %}<img src="{{ place.image | relative_url }}" alt="{{ place.image_alt | escape }}" width="640" height="400" loading="lazy">{% endif %}
       <div class="travel-place-copy">
         <p class="eyebrow">{% case place.type %}{% when 'past' %}Past trip{% when 'wishlist' %}Wish list{% when 'rating' %}The Lydia Rating{% endcase %}</p>
@@ -51,7 +53,7 @@ travel_map: true
         <p class="travel-place-location">{{ place.location | escape }}</p>
         <p>{{ place.summary | escape }}</p>
         {% if place.rating %}<p class="travel-place-rating">Lydia's rating: {{ place.rating | escape }}</p>{% endif %}
-        <div class="travel-place-actions"><button type="button" data-show-place="{{ place.id | escape }}" hidden>Show on map</button>{% if place.url %}<a href="{{ place.url | relative_url }}">{% if place.type == 'rating' %}Read the review{% else %}Read the story{% endif %} &rarr;</a>{% endif %}</div>
+        <div class="travel-place-actions">{% if place.type == 'past' %}<a href="{{ '/photo-gallery/' | relative_url }}#{{ place.id | escape }}">View trip photos &rarr;</a>{% endif %}<button type="button" data-show-place="{{ place.id | escape }}" hidden>Show on map</button>{% if place.url %}<a href="{{ place.url | relative_url }}">{% if place.type == 'rating' %}Read the review{% else %}Read the story{% endif %} &rarr;</a>{% endif %}</div>
       </div>
     </article>
     {% endfor %}

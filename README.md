@@ -169,3 +169,22 @@ There is no geolocation request, mapping API key, live tile service, or paid map
 subscription. The map is a destination overview, not street-level directions.
 Source attribution and license information are in `assets/data/README.txt` and
 `assets/vendor/leaflet/LICENSE`.
+
+### Photo Gallery
+
+The Photo Gallery at `/photo-gallery/` creates an album for every past trip.
+Travel cards and selected pins link to that album; its "Show trip on map" link
+opens the matching pin. Until photos are added, the album says they are coming soon.
+
+Add approved trip photos to `photos/`, then add a `photos` list to the matching
+destination in `_data/travel_places.yml`. Use descriptive alt text for the actual
+image; captions are optional. For example:
+
+```yaml
+  photos:
+    - src: /photos/niagara-falls-01.jpg
+      alt: Describe what is visible in this photo.
+      caption: Optional caption.
+```
+
+Only add entries after the matching image files exist.

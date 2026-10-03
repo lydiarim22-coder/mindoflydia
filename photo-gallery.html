@@ -1,0 +1,38 @@
+---
+layout: default
+title: Photo Gallery
+permalink: /photo-gallery/
+description: "Trip photos from Lydia's travels, connected to destinations on the travel map."
+---
+<section class="page-intro shell">
+  <p class="eyebrow">Through my lens</p>
+  <h1>Photo Gallery</h1>
+  <p>Memories from our travels. Explore each trip's photos or find its place on the map.</p>
+  <p><a href="{{ '/travel/' | relative_url }}">Explore the travel map &rarr;</a></p>
+</section>
+<section class="shell section" aria-label="Trip photo albums">
+  {% assign past_trips = site.data.travel_places | where: 'type', 'past' %}
+  <nav class="gallery-trip-links" aria-label="Jump to a trip">
+    {% for place in past_trips %}<a href="#{{ place.id | escape }}">{{ place.name | escape }}</a>{% endfor %}
+  </nav>
+  {% for place in past_trips %}
+  <section class="trip-album" id="{{ place.id | escape }}" aria-labelledby="album-{{ place.id | escape }}">
+    <p class="eyebrow">Past trip</p>
+    <h2 id="album-{{ place.id | escape }}">{{ place.name | escape }}</h2>
+    <p>{{ place.location | escape }}</p>
+    <p><a href="{{ '/travel/' | relative_url }}#{{ place.id | escape }}">Show trip on map &rarr;</a></p>
+    {% if place.photos and place.photos.size > 0 %}
+    <div class="trip-photo-grid">
+      {% for photo in place.photos %}
+      <figure>
+        <a href="{{ photo.src | relative_url }}" aria-label="View full photo: {{ photo.alt | escape }}"><img src="{{ photo.src | relative_url }}" alt="{{ photo.alt | escape }}" loading="lazy"></a>
+        {% if photo.caption %}<figcaption>{{ photo.caption | escape }}</figcaption>{% endif %}
+      </figure>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="gallery-empty">Photos from this trip are coming soon.</p>
+    {% endif %}
+  </section>
+  {% endfor %}
+</section>

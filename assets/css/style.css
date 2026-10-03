@@ -78,3 +78,13 @@ h3{font-size:25px;margin:10px 0 14px}
 .shop-product{display:block;width:100%;max-width:200px}
 .shop-product img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:4px}
 .shop-product span{display:block;margin-top:10px;font-weight:700}
+
+/* Trip photo albums. */
+.gallery-trip-links{display:flex;flex-wrap:wrap;gap:10px 20px;margin-bottom:40px}
+.trip-album{padding-block:30px;border-top:1px solid var(--line);scroll-margin-top:24px}
+.trip-album h2{font-size:32px;margin-bottom:12px}
+.gallery-empty{color:var(--muted)}
+.trip-photo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:20px}
+.trip-photo-grid figure{margin:0}
+.trip-photo-grid img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:4px}
+.trip-photo-grid figcaption{font-size:14px;color:var(--muted);padding-top:8px}

@@ -14,6 +14,8 @@
   const detailDescription = root.querySelector('[data-detail-description]');
   const detailRating = root.querySelector('[data-detail-rating]');
   const detailLink = root.querySelector('[data-detail-link]');
+  const detailGallery = root.querySelector('[data-detail-gallery]');
+  const galleryUrl = root.querySelector('a[href*="/photo-gallery/"]').href;
   const cards = [...root.querySelectorAll('[data-place-id]')];
   const labels = { past: 'Past trip', wishlist: 'Wish list', rating: 'The Lydia Rating' };
   const symbols = { past: '&#10003;', wishlist: '&#9825;', rating: '&#9733;' };
@@ -48,9 +50,14 @@
     detailRating.hidden = true;
     detailLink.hidden = true;
     detailLink.removeAttribute('href');
+    detailGallery.hidden = true;
+    detailGallery.removeAttribute('href');
   }
   function showPlace(place, focusMap = false) {
     selected = place.id;
+    detailGallery.hidden = place.type !== 'past';
+    if (place.type === 'past') detailGallery.href = galleryUrl + '#' + place.id;
+    else detailGallery.removeAttribute('href');
     detailType.textContent = labels[place.type];
     detailTitle.textContent = place.name;
     detailDescription.textContent = `${place.location}. ${place.summary}`;
@@ -126,6 +133,18 @@
     }
   }
 
+  function openLinkedTrip() {
+    const id = window.location.hash.slice(1);
+    const place = places.find(item => item.id === id);
+    if (!place) return;
+    search.value = '';
+    countrySelect.value = '';
+    activeFilter = 'all';
+    root.querySelectorAll('[data-filter]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.filter === 'all')));
+    render(false);
+    showPlace(place, true);
+  }
+
   async function init() {
     status.textContent = 'Loading the world map…';
     try {
@@ -172,6 +191,8 @@
       });
       render();
       root.dataset.mapReady = 'true';
+      openLinkedTrip();
+      window.addEventListener('hashchange', openLinkedTrip);
     } catch (error) {
       if (map) map.remove();
       root.querySelector('.travel-map-frame').hidden = true;

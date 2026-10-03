@@ -106,6 +106,26 @@ with sync_playwright() as p:
             expect(page.locator('[data-travel-empty]')).to_be_visible()
         assert not errors, errors
 
+
+        # Albums and map pins link to each other, including direct arrivals.
+        page.goto(base + '/photo-gallery/')
+        expect(page.locator('.trip-album')).to_have_count(sum(place['type'] == 'past' for place in places))
+        page.locator('#niagara-falls-ny a[href*="/travel/"]').click()
+        expect(page.locator('[data-travel-explorer]')).to_have_attribute('data-map-ready', 'true')
+        expect(page.locator('#travel-detail-title')).to_have_text('Niagara Falls')
+        expect(page.locator('[data-detail-gallery]')).to_be_visible()
+        page.locator('[data-detail-gallery]').click()
+        expect(page).to_have_url(base + '/photo-gallery/#niagara-falls-ny')
+        page.goto(base + '/travel/#los-angeles-california')
+        expect(page.locator('#travel-detail-title')).to_have_text('Los Angeles')
+        page.locator('[data-travel-reset]').click()
+        expect(page.locator('[data-detail-gallery]')).to_be_hidden()
+        page.evaluate("window.location.hash = 'disneyland-anaheim'")
+        expect(page.locator('#travel-detail-title')).to_have_text('Disneyland')
+        page.goto(base + '/travel/#unknown-trip')
+        expect(page.locator('[data-travel-explorer]')).to_have_attribute('data-map-ready', 'true')
+        expect(page.locator('#travel-detail-title')).to_have_text('Start somewhere.')
+
         # A failed map request must leave the real destination card readable.
         page.route('**/travel-countries.geojson', lambda route: route.abort())
         page.reload()
