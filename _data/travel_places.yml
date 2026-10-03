@@ -37,3 +37,12 @@
   latitude: 37.775
   longitude: -122.418
   summary: "A past-trip destination in California."
+
+- id: los-angeles-california
+  name: Los Angeles
+  location: California, United States
+  country: USA
+  type: past
+  latitude: 34.052
+  longitude: -118.244
+  summary: "A past-trip destination in California."
