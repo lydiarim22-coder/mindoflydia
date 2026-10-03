@@ -46,3 +46,48 @@
   latitude: 34.052
   longitude: -118.244
   summary: "A past-trip destination in California."
+
+- id: disneyland-anaheim
+  name: Disneyland
+  location: Anaheim, California, United States
+  country: USA
+  type: past
+  latitude: 33.836
+  longitude: -117.914
+  summary: "A past-trip destination in Anaheim, California."
+
+- id: universal-studios-hollywood
+  name: Universal Studios Hollywood
+  location: Universal City, California, United States
+  country: USA
+  type: past
+  latitude: 34.139
+  longitude: -118.353
+  summary: "A past-trip destination in Universal City, California."
+
+- id: seaworld-san-diego
+  name: SeaWorld San Diego
+  location: San Diego, California, United States
+  country: USA
+  type: past
+  latitude: 32.717
+  longitude: -117.163
+  summary: "A past-trip destination in San Diego, California."
+
+- id: knotts-berry-farm
+  name: Knott's Berry Farm
+  location: Buena Park, California, United States
+  country: USA
+  type: past
+  latitude: 33.867
+  longitude: -117.998
+  summary: "A past-trip destination in Buena Park, California."
+
+- id: six-flags-magic-mountain
+  name: Six Flags Magic Mountain
+  location: Valencia, California, United States
+  country: USA
+  type: past
+  latitude: 34.443
+  longitude: -118.609
+  summary: "A past-trip destination in Valencia, California."
