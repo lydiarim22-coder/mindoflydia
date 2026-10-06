@@ -163,3 +163,12 @@
   latitude: 36.350
   longitude: 127.385
   summary: "A past-trip destination in South Korea."
+
+- id: pohang-south-korea
+  name: Pohang
+  location: South Korea
+  country: KOR
+  type: past
+  latitude: 36.019
+  longitude: 129.343
+  summary: "A past-trip destination in South Korea."
