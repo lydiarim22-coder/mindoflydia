@@ -127,3 +127,12 @@
   latitude: 35.872
   longitude: 128.601
   summary: "A past-trip destination in South Korea."
+
+- id: busan-south-korea
+  name: Busan
+  location: South Korea
+  country: KOR
+  type: past
+  latitude: 35.180
+  longitude: 129.076
+  summary: "A past-trip destination in South Korea."
