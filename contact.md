@@ -1,8 +1,22 @@
 ---
 layout: default
 title: 'Contact Lydia Rim'
-description: 'Connect with Lydia Rim for Maryland real estate inquiries, and learn about contacting Mind of Lydia with story ideas and review suggestions.'
+description: 'Connect with Lydia Rim to share a story, suggest a topic, ask about collaborations, or report a website issue.'
 permalink: /contact/
 ---
-<section class="page-intro shell"><p class="eyebrow">Get in touch</p><h1>Contact</h1><p>Have a question, a story idea, or something you’d like me to review?</p></section>
-<section class="shell section compact"><div class="prose narrow"><p>For now, you can reach me through my <a href="https://lydiarim.sites.cbmoxi.com/" rel="noopener noreferrer">Coldwell Banker Realty page</a> for Maryland real estate inquiries. A dedicated Mind of Lydia contact address will be added here once it is ready.</p><p>For privacy, please do not send personal information about children through public comments or social media.</p></div></section>
+<section class="page-intro shell">
+  <p class="eyebrow">Get in touch</p>
+  <h1>Let's connect.</h1>
+  <p>Have a story to share, a topic you'd love to see, or a collaboration in mind? I'd love to hear from you. Thank you for being part of Mind of Lydia.</p>
+</section>
+<section class="shell section compact">
+  <div class="prose narrow">
+    <p>Use my contact form to leave your name, email, and message.</p>
+    <p><a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSeeuHiUeKfLxO-Frd8dixwfdEucy33DJIyq_zjyf1hIXRKDLQ/viewform" target="_blank" rel="noopener noreferrer">Send a message &rarr;</a></p>
+    <p>Opens in Google Forms in a new tab.</p>
+    <div class="related-stories">
+      <h2>Maryland real estate inquiries</h2>
+      <p>For help buying or selling a home in Maryland, visit my <a href="https://lydiarim.sites.cbmoxi.com/" rel="noopener noreferrer">Coldwell Banker Realty page</a>.</p>
+    </div>
+  </div>
+</section>
