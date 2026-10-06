@@ -109,3 +109,12 @@
   latitude: 46.818
   longitude: 8.228
   summary: "A wish-list destination in Switzerland."
+
+- id: seoul-south-korea
+  name: Seoul
+  location: South Korea
+  country: KOR
+  type: past
+  latitude: 37.566
+  longitude: 126.978
+  summary: "A past-trip destination in South Korea."
