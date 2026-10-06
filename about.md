@@ -23,7 +23,7 @@ permalink: /about/
       <li><a href="{{ '/photo-gallery/' | relative_url }}">Photo Gallery</a> — A space for travel memories, home cooking, and garden discoveries. Each travel album links to its destination on the map.</li>
       <li><a href="{{ '/faith-and-life/' | relative_url }}">Faith &amp; Life</a> — Reflections on faith, gratitude, relationships, personal growth, and finding meaning in ordinary days.</li>
       <li><a href="{{ '/korean-culture/' | relative_url }}">Korean Culture</a> — A growing space for Korean food, beauty, dramas, movies, music, and books.</li>
-      <li><a href="{{ '/shop/' | relative_url }}">Shop</a> — Journals and paper goods from Purple Print Shop, along with apparel designs from Purple Cloth Shop, including Skater Life with a clickable product photo.</li>
+      <li><a href="{{ '/shop/' | relative_url }}">Shop</a> — Journals and paper goods from Purple Print Shop, along with apparel designs from Purple Cloth Shop, including item with a clickable product photo.</li>
       <li><a href="{{ '/projects-we-love/' | relative_url }}">Projects We Love</a> — Creative work and projects worth sharing.</li>
     </ul>
     <p>Some sections are just beginning, and new stories and photographs will be added as this space grows. You can also <a href="{{ '/journal/' | relative_url }}">browse all stories</a> in one place.</p>
