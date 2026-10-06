@@ -3,12 +3,12 @@ layout: default
 title: Korean Culture
 permalink: /korean-culture/
 category: korean-culture
-description: "Explore Korean food, beauty, dramas, and movies with stories and discoveries from Lydia."
+description: "Explore Korean food, beauty, dramas, movies, music, and books with stories and discoveries from Lydia."
 ---
 <section class="page-intro shell">
   <p class="eyebrow">Explore with Lydia</p>
   <h1>Korean Culture</h1>
-  <p>Food to share, beauty to explore, and stories to watch. A space for my discoveries and reflections on Korean culture.</p>
+  <p>Food to share, beauty to explore, music to enjoy, and stories to watch and read. A space for my discoveries and reflections on Korean culture.</p>
 </section>
 <section class="shell section compact">
   <nav class="gallery-trip-links" aria-label="Korean Culture topics">
@@ -16,9 +16,11 @@ description: "Explore Korean food, beauty, dramas, and movies with stories and d
     <a href="#beauty">Beauty</a>
     <a href="#dramas">Dramas</a>
     <a href="#movies">Movies</a>
+    <a href="#music">Music</a>
+    <a href="#books">Books</a>
   </nav>
   {% assign culture_posts = site.posts | where: 'category', 'korean-culture' %}
-  {% assign topics = 'food,beauty,dramas,movies' | split: ',' %}
+  {% assign topics = 'food,beauty,dramas,movies,music,books' | split: ',' %}
   {% for topic in topics %}
   {% assign topic_posts = culture_posts | where: 'topic', topic %}
   <section class="culture-topic" id="{{ topic }}" aria-labelledby="culture-{{ topic }}">
@@ -28,6 +30,8 @@ description: "Explore Korean food, beauty, dramas, and movies with stories and d
       {% when 'beauty' %}<p>Korean beauty discoveries, routines, and personal experiences.</p>
       {% when 'dramas' %}<p>Korean dramas, memorable characters, and stories that stay with us.</p>
       {% when 'movies' %}<p>Korean movies and reflections on what we watch.</p>
+      {% when 'music' %}<p>Korean music, artists, and songs that become part of our everyday lives.</p>
+      {% when 'books' %}<p>Korean books, authors, and reflections on what we read.</p>
     {% endcase %}
     {% if topic == 'food' %}<p><a href="{{ '/photo-gallery/' | relative_url }}#from-my-kitchen">Visit From My Kitchen &rarr;</a></p>{% endif %}
     {% if topic_posts.size > 0 %}

@@ -193,5 +193,5 @@ Only add entries after the matching image files exist.
 
 The Korean Culture section at `/korean-culture/` groups posts by topic.
 Set `category: korean-culture` and `topic: food`, `beauty`, `dramas`, or
-`movies` in a post's front matter. Posts without a topic appear under
+`movies`, `music`, or `books` in a post's front matter. Posts without a topic appear under
 More Korean Culture. The Food section also links to From My Kitchen.
