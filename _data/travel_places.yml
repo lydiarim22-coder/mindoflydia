@@ -145,3 +145,12 @@
   latitude: 37.456
   longitude: 126.705
   summary: "A past-trip destination in South Korea."
+
+- id: gyeongju-south-korea
+  name: Gyeongju
+  location: South Korea
+  country: KOR
+  type: past
+  latitude: 35.856
+  longitude: 129.225
+  summary: "A past-trip destination in South Korea."
