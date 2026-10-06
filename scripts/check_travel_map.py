@@ -62,6 +62,18 @@ with sync_playwright() as p:
         expect(page.locator('.travel-pin')).to_have_count(len(places))
         expect(page.locator('[data-travel-group="past"]')).to_be_visible()
         expect(page.locator('[data-travel-group="past"] [data-place-id]')).to_have_count(sum(place['type'] == 'past' for place in places))
+        # Regional lists collapse independently and pin selection opens its region.
+        expect(page.locator('[data-travel-region]')).to_have_count(len({place.get('region') for place in places if place['type'] == 'past'}))
+        region = page.locator('[data-travel-region]').filter(has=page.locator('[data-place-id="niagara-falls-ny"]'))
+        region.locator('summary').click()
+        expect(page.locator('[data-place-id="niagara-falls-ny"]')).to_be_hidden()
+        page.locator('.travel-pin[title^="Niagara Falls"]').click()
+        expect(page.locator('[data-place-id="niagara-falls-ny"]')).to_be_visible()
+        page.locator('#travel-search').fill('Busan')
+        expect(page.locator('[data-travel-region]:visible')).to_have_count(1)
+        expect(page.locator('[data-place-id="busan-south-korea"]')).to_be_visible()
+        page.locator('[data-travel-reset]').click()
+
         page.locator('.travel-pin.past').first.focus()
         page.keyboard.press('Enter')
         expect(page.locator('#travel-detail-title')).not_to_have_text('Start somewhere.')

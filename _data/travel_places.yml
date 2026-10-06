@@ -1,6 +1,7 @@
 # Publish only locations approved by Lydia; see README.md for the format.
 - id: niagara-falls-ny
   name: Niagara Falls
+  region: New York
   location: New York, United States
   country: USA
   type: past
@@ -11,6 +12,7 @@
 # City coordinates: https://ungegn.un.org/dashboard/cities/details?id=1721
 - id: cancun-mexico
   name: Cancún
+  region: Mexico
   location: Mexico
   country: MEX
   type: past
@@ -21,6 +23,7 @@
 # City coordinates: https://maps.apple.com/place?auid=7023555156682875009
 - id: san-diego-california
   name: San Diego
+  region: California
   location: California, United States
   country: USA
   type: past
@@ -31,6 +34,7 @@
 # City coordinates: https://ungegn.un.org/dashboard/cities/details?id=361
 - id: san-francisco-california
   name: San Francisco
+  region: California
   location: California, United States
   country: USA
   type: past
@@ -40,6 +44,7 @@
 
 - id: los-angeles-california
   name: Los Angeles
+  region: California
   location: California, United States
   country: USA
   type: past
@@ -49,6 +54,7 @@
 
 - id: disneyland-anaheim
   name: Disneyland
+  region: California
   location: Anaheim, California, United States
   country: USA
   type: past
@@ -58,6 +64,7 @@
 
 - id: universal-studios-hollywood
   name: Universal Studios Hollywood
+  region: California
   location: Universal City, California, United States
   country: USA
   type: past
@@ -67,6 +74,7 @@
 
 - id: seaworld-san-diego
   name: SeaWorld San Diego
+  region: California
   location: San Diego, California, United States
   country: USA
   type: past
@@ -76,6 +84,7 @@
 
 - id: knotts-berry-farm
   name: Knott's Berry Farm
+  region: California
   location: Buena Park, California, United States
   country: USA
   type: past
@@ -85,6 +94,7 @@
 
 - id: six-flags-magic-mountain
   name: Six Flags Magic Mountain
+  region: California
   location: Valencia, California, United States
   country: USA
   type: past
@@ -112,6 +122,7 @@
 
 - id: seoul-south-korea
   name: Seoul
+  region: South Korea
   location: South Korea
   country: KOR
   type: past
@@ -121,6 +132,7 @@
 
 - id: daegu-south-korea
   name: Daegu
+  region: South Korea
   location: South Korea
   country: KOR
   type: past
@@ -130,6 +142,7 @@
 
 - id: busan-south-korea
   name: Busan
+  region: South Korea
   location: South Korea
   country: KOR
   type: past
@@ -139,6 +152,7 @@
 
 - id: incheon-south-korea
   name: Incheon
+  region: South Korea
   location: South Korea
   country: KOR
   type: past
@@ -148,6 +162,7 @@
 
 - id: gyeongju-south-korea
   name: Gyeongju
+  region: South Korea
   location: South Korea
   country: KOR
   type: past
@@ -157,6 +172,7 @@
 
 - id: daejeon-south-korea
   name: Daejeon
+  region: South Korea
   location: South Korea
   country: KOR
   type: past
@@ -166,6 +182,7 @@
 
 - id: pohang-south-korea
   name: Pohang
+  region: South Korea
   location: South Korea
   country: KOR
   type: past

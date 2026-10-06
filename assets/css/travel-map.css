@@ -57,3 +57,8 @@
 /* Destination lists grouped by past trips, wish list, and reviews. */
 .travel-group{margin-top:24px}
 .travel-group>h4{font:600 24px/1.2 'Playfair Display',Georgia,serif;color:var(--plum);margin:0;padding-bottom:12px;border-bottom:1px solid var(--line)}
+
+.travel-region{margin-top:20px;padding:16px;border:1px solid var(--line);border-radius:5px}
+.travel-region summary{cursor:pointer;color:var(--plum);font-weight:700;min-height:32px;overflow-wrap:anywhere}
+.travel-region summary:focus-visible{outline:3px solid #805978;outline-offset:3px}
+.travel-region summary span{font-size:13px;font-weight:400;color:var(--muted);margin-left:12px}

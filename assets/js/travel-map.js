@@ -55,6 +55,8 @@
   }
   function showPlace(place, focusMap = false) {
     selected = place.id;
+    const region = cards.find(card => card.dataset.placeId === place.id)?.closest('[data-travel-region]');
+    if (region) region.open = true;
     detailGallery.hidden = place.type !== 'past';
     if (place.type === 'past') detailGallery.href = galleryUrl + '#' + place.id;
     else detailGallery.removeAttribute('href');
@@ -96,6 +98,12 @@
     cards.forEach(card => { card.hidden = !ids.has(card.dataset.placeId); });
     root.querySelectorAll('[data-travel-group]').forEach(group => {
       group.hidden = ![...group.querySelectorAll('[data-place-id]')].some(card => !card.hidden);
+    });
+    root.querySelectorAll('[data-travel-region]').forEach(region => {
+      const matching = [...region.querySelectorAll('[data-place-id]')].filter(card => !card.hidden);
+      region.hidden = matching.length === 0;
+      region.querySelector('[data-region-count]').textContent = matching.length + (matching.length === 1 ? ' place' : ' places');
+      if (query || countrySelect.value) region.open = matching.length > 0;
     });
     markerGroup.clearLayers();
     markers.clear();
@@ -202,6 +210,7 @@
       root.dataset.mapError = error.message;
       controls.hidden = true;
       cards.forEach(card => { card.hidden = false; });
+      root.querySelectorAll('[data-travel-region]').forEach(region => { region.hidden = false; region.open = true; });
       root.querySelectorAll('[data-travel-group]').forEach(group => { group.hidden = false; });
       root.querySelectorAll('[data-show-place]').forEach(button => { button.hidden = true; });
       status.textContent = 'The map could not load. You can still browse the places and stories below. Please try reloading the page.';

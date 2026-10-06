@@ -1,0 +1,11 @@
+    <article class="travel-place" id="{{ place.id | escape }}" data-place-id="{{ place.id | escape }}">
+      {% if place.image %}<img src="{{ place.image | relative_url }}" alt="{{ place.image_alt | escape }}" width="640" height="400" loading="lazy">{% endif %}
+      <div class="travel-place-copy">
+        <p class="eyebrow">{% case place.type %}{% when 'past' %}Past trip{% when 'wishlist' %}Wish list{% when 'rating' %}The Lydia Rating{% endcase %}</p>
+        <h4>{{ place.name | escape }}</h4>
+        <p class="travel-place-location">{{ place.location | escape }}</p>
+        <p>{{ place.summary | escape }}</p>
+        {% if place.rating %}<p class="travel-place-rating">Lydia's rating: {{ place.rating | escape }}</p>{% endif %}
+        <div class="travel-place-actions">{% if place.type == 'past' %}<a href="{{ '/photo-gallery/' | relative_url }}#{{ place.id | escape }}">View trip photos &rarr;</a>{% endif %}<button type="button" data-show-place="{{ place.id | escape }}" hidden>Show on map</button>{% if place.url %}<a href="{{ place.url | relative_url }}">{% if place.type == 'rating' %}Read the review{% else %}Read the story{% endif %} &rarr;</a>{% endif %}</div>
+      </div>
+    </article>

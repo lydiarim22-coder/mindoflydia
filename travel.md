@@ -50,21 +50,22 @@ travel_map: true
     {% for group in place_groups %}{% if group.name == group_type %}
     <section class="travel-group" data-travel-group="{{ group_type }}" aria-labelledby="group-{{ group_type }}">
       <h4 id="group-{{ group_type }}">{% case group_type %}{% when 'past' %}Past trips{% when 'wishlist' %}Wish list{% when 'rating' %}The Lydia Rating{% endcase %}</h4>
+      {% if group_type == 'past' %}
+      {% assign regions = group.items | group_by: 'region' %}
+      {% for region in regions %}
+      <details class="travel-region" data-travel-region open>
+        <summary>{{ region.name | default: 'Other destinations' | escape }} <span data-region-count>{{ region.items.size }} places</span></summary>
+        <div class="travel-places">
+          {% for place in region.items %}{% include travel-place.html %}{% endfor %}
+        </div>
+      </details>
+      {% endfor %}
+      {% else %}
       <div class="travel-places">
-    {% for place in group.items %}
-    <article class="travel-place" id="{{ place.id | escape }}" data-place-id="{{ place.id | escape }}">
-      {% if place.image %}<img src="{{ place.image | relative_url }}" alt="{{ place.image_alt | escape }}" width="640" height="400" loading="lazy">{% endif %}
-      <div class="travel-place-copy">
-        <p class="eyebrow">{% case place.type %}{% when 'past' %}Past trip{% when 'wishlist' %}Wish list{% when 'rating' %}The Lydia Rating{% endcase %}</p>
-        <h4>{{ place.name | escape }}</h4>
-        <p class="travel-place-location">{{ place.location | escape }}</p>
-        <p>{{ place.summary | escape }}</p>
-        {% if place.rating %}<p class="travel-place-rating">Lydia's rating: {{ place.rating | escape }}</p>{% endif %}
-        <div class="travel-place-actions">{% if place.type == 'past' %}<a href="{{ '/photo-gallery/' | relative_url }}#{{ place.id | escape }}">View trip photos &rarr;</a>{% endif %}<button type="button" data-show-place="{{ place.id | escape }}" hidden>Show on map</button>{% if place.url %}<a href="{{ place.url | relative_url }}">{% if place.type == 'rating' %}Read the review{% else %}Read the story{% endif %} &rarr;</a>{% endif %}</div>
+        {% for place in group.items %}{% include travel-place.html %}{% endfor %}
       </div>
-    </article>
-    {% endfor %}
-      </div>
+      {% endif %}
+
     </section>
     {% endif %}{% endfor %}
     {% endfor %}
