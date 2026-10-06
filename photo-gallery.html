@@ -2,15 +2,33 @@
 layout: default
 title: Photo Gallery
 permalink: /photo-gallery/
-description: "Trip photos from Lydia's travels, connected to destinations on the travel map."
+description: "Photos from Lydia's travels and home cooking, with trip albums connected to the travel map."
 ---
 <section class="page-intro shell">
   <p class="eyebrow">Through my lens</p>
   <h1>Photo Gallery</h1>
-  <p>Memories from our travels. Explore each trip's photos or find its place on the map.</p>
-  <p><a href="{{ '/travel/' | relative_url }}">Explore the travel map &rarr;</a></p>
+  <p>Memories from our travels and a little inspiration from my kitchen. Browse the photos, then explore the places behind our trips.</p>
+  <nav class="gallery-trip-links" aria-label="Gallery sections"><a href="#from-my-kitchen">From My Kitchen</a><a href="#trip-albums">Travel Albums</a><a href="{{ '/travel/' | relative_url }}">Explore the travel map &rarr;</a></nav>
 </section>
-<section class="shell section" aria-label="Trip photo albums">
+<section class="shell section" id="from-my-kitchen" aria-labelledby="kitchen-title">
+  <p class="eyebrow">Made at home</p>
+  <h2 id="kitchen-title">From My Kitchen</h2>
+  <p>A little collection of the meals, treats, and everyday dishes I cook at home.</p>
+  {% if site.data.kitchen_photos.size > 0 %}
+  <div class="trip-photo-grid">
+    {% for photo in site.data.kitchen_photos %}
+    <figure>
+      <a href="{{ photo.src | relative_url }}" aria-label="View full photo: {{ photo.alt | escape }}"><img src="{{ photo.src | relative_url }}" alt="{{ photo.alt | escape }}" loading="lazy"></a>
+      <figcaption><strong>{{ photo.name | escape }}</strong>{% if photo.caption %}<br>{{ photo.caption | escape }}{% endif %}{% if photo.recipe_url %}<br><a href="{{ photo.recipe_url | relative_url }}">View recipe &rarr;</a>{% endif %}</figcaption>
+    </figure>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="gallery-empty">Photos from my kitchen are coming soon.</p>
+  {% endif %}
+</section>
+<section class="shell section" id="trip-albums" aria-label="Trip photo albums">
+  <h2>Travel Albums</h2>
   {% assign past_trips = site.data.travel_places | where: 'type', 'past' %}
   <nav class="gallery-trip-links" aria-label="Jump to a trip">
     {% for place in past_trips %}<a href="#{{ place.id | escape }}">{{ place.name | escape }}</a>{% endfor %}
