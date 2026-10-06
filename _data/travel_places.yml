@@ -189,3 +189,13 @@
   latitude: 36.019
   longitude: 129.343
   summary: "A past-trip destination in South Korea."
+
+- id: san-juan-capistrano-california
+  name: San Juan Capistrano
+  region: California
+  location: California, United States
+  country: USA
+  type: past
+  latitude: 33.502
+  longitude: -117.663
+  summary: "A past-trip destination in California."
