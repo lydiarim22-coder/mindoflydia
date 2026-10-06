@@ -20,7 +20,7 @@ permalink: /about/
       <li><a href="{{ '/mental-wellness/' | relative_url }}">Mental Wellness</a> — Personal reflections and encouragement for caring for ourselves through everyday life.</li>
       <li><a href="{{ '/maryland-homes/' | relative_url }}">Maryland Homes</a> — A space for home and real estate topics in Maryland.</li>
       <li><a href="{{ '/travel/' | relative_url }}">Travel</a> — An interactive map of past trips, wish-list destinations, and The Lydia Rating locations, organized by category.</li>
-      <li><a href="{{ '/photo-gallery/' | relative_url }}">Photo Gallery</a> — Trip albums connected to the travel map, plus <a href="{{ '/photo-gallery/' | relative_url }}#from-my-kitchen">From My Kitchen</a>, a space for photos of dishes I cook at home.</li>
+      <li><a href="{{ '/photo-gallery/' | relative_url }}">Photo Gallery</a> — Trip albums connected to the travel map, plus <a href="{{ '/photo-gallery/' | relative_url }}#from-my-kitchen">From My Kitchen</a>, a space for photos of dishes I cook at home, and <a href="{{ '/photo-gallery/' | relative_url }}#from-my-garden">From My Garden</a>, for flowers, plants, and moments of growth.</li>
       <li><a href="{{ '/faith-and-life/' | relative_url }}">Faith &amp; Life</a> — Reflections on faith, gratitude, relationships, personal growth, and finding meaning in ordinary days.</li>
       <li><a href="{{ '/korean-culture/' | relative_url }}">Korean Culture</a> — A growing space for Korean food, beauty, dramas, movies, music, and books.</li>
       <li><a href="{{ '/shop/' | relative_url }}">Shop</a> — Journals and paper goods from Purple Print Shop, along with apparel designs from Purple Cloth Shop.</li>
