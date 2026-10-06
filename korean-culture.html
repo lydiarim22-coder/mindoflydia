@@ -1,0 +1,56 @@
+---
+layout: default
+title: Korean Culture
+permalink: /korean-culture/
+category: korean-culture
+description: "Explore Korean food, beauty, dramas, and movies with stories and discoveries from Lydia."
+---
+<section class="page-intro shell">
+  <p class="eyebrow">Explore with Lydia</p>
+  <h1>Korean Culture</h1>
+  <p>Food to share, beauty to explore, and stories to watch. A space for my discoveries and reflections on Korean culture.</p>
+</section>
+<section class="shell section compact">
+  <nav class="gallery-trip-links" aria-label="Korean Culture topics">
+    <a href="#food">Food</a>
+    <a href="#beauty">Beauty</a>
+    <a href="#dramas">Dramas</a>
+    <a href="#movies">Movies</a>
+  </nav>
+  {% assign culture_posts = site.posts | where: 'category', 'korean-culture' %}
+  {% assign topics = 'food,beauty,dramas,movies' | split: ',' %}
+  {% for topic in topics %}
+  {% assign topic_posts = culture_posts | where: 'topic', topic %}
+  <section class="culture-topic" id="{{ topic }}" aria-labelledby="culture-{{ topic }}">
+    <h2 id="culture-{{ topic }}">{{ topic | capitalize }}</h2>
+    {% case topic %}
+      {% when 'food' %}<p>Korean dishes, home cooking, and the flavors that bring people together.</p>
+      {% when 'beauty' %}<p>Korean beauty discoveries, routines, and personal experiences.</p>
+      {% when 'dramas' %}<p>Korean dramas, memorable characters, and stories that stay with us.</p>
+      {% when 'movies' %}<p>Korean movies and reflections on what we watch.</p>
+    {% endcase %}
+    {% if topic == 'food' %}<p><a href="{{ '/photo-gallery/' | relative_url }}#from-my-kitchen">Visit From My Kitchen &rarr;</a></p>{% endif %}
+    {% if topic_posts.size > 0 %}
+    <div class="post-grid">
+      {% for post in topic_posts %}
+      <article class="post-card">
+        <p class="eyebrow">{{ post.date | date: '%B %-d, %Y' }}</p>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+        <p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 28 }}</p>
+        <a class="text-link" href="{{ post.url | relative_url }}">Read story &rarr;</a>
+      </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="gallery-empty">{{ topic | capitalize }} stories are coming soon.</p>
+    {% endif %}
+  </section>
+  {% endfor %}
+  {% assign other_posts = culture_posts | where_exp: 'post', 'post.topic == nil' %}
+  {% if other_posts.size > 0 %}
+  <section class="culture-topic" aria-labelledby="culture-more">
+    <h2 id="culture-more">More Korean Culture</h2>
+    <ul>{% for post in other_posts %}<li><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>{% endfor %}</ul>
+  </section>
+  {% endif %}
+</section>
