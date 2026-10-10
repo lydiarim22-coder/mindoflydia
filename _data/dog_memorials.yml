@@ -24,3 +24,6 @@
 
 - name: Podong 2
   breed: Mixed-breed dog
+
+- name: "Unknown name"
+  breed: Yellow Canary
