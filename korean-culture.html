@@ -34,6 +34,18 @@ description: "Explore Korean food, beauty, dramas, movies, music, and books with
       {% when 'books' %}<p>Korean books, authors, and reflections on what we read.</p>
     {% endcase %}
     {% if topic == 'food' %}<p><a href="{{ '/photo-gallery/' | relative_url }}#from-my-kitchen">Visit From My Kitchen &rarr;</a></p>{% endif %}
+    {% assign topic_items = site.data.korean_culture_items | where: 'topic', topic %}
+    {% if topic_items.size > 0 %}
+    <div class="post-grid">
+      {% for item in topic_items %}
+      <article class="post-card">
+        <p class="eyebrow">{{ item.year | escape }} &middot; {{ item.genre | escape }}</p>
+        <h3>{{ item.title | escape }}</h3>
+        <p>{{ item.note | escape }}</p>
+      </article>
+      {% endfor %}
+    </div>
+    {% endif %}
     {% if topic_posts.size > 0 %}
     <div class="post-grid">
       {% for post in topic_posts %}
@@ -45,7 +57,7 @@ description: "Explore Korean food, beauty, dramas, movies, music, and books with
       </article>
       {% endfor %}
     </div>
-    {% else %}
+    {% elsif topic_items.size == 0 %}
     <p class="gallery-empty">{{ topic | capitalize }} stories are coming soon.</p>
     {% endif %}
   </section>
