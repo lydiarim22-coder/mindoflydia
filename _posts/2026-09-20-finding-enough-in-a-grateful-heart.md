@@ -4,9 +4,9 @@ title: "Finding Enough in a Grateful Heart"
 category: faith-and-life
 description: "A reflection on gratitude, faith, and noticing the goodness already present in an unfinished, ordinary life."
 ---
-> When you are grateful for what you have, you have everything you need.
+Gratitude helps us notice the goodness in an unfinished life.
 
-There is something comforting about those words. They invite us to pause before reaching for the next thing and take a closer look at the life already in front of us.
+Taking a moment to appreciate what we have can bring comfort. It invites us to pause before reaching for the next thing and take a closer look at the life already in front of us.
 
 It is easy to imagine that peace is waiting on the other side of something: a cleaner house, a little more money, an answered prayer, a season when everyone needs a little less from us. We can spend so much time looking ahead that today becomes something we are simply trying to get through.
 
@@ -22,11 +22,11 @@ None of those things folds the laundry. Unfortunately, gratitude has yet to deve
 
 But they are part of the day, too. They deserve some of our attention alongside everything that still needs fixing.
 
-I think that is where this quote becomes useful: it gives us permission to appreciate a life that is still very much in progress.
+We can appreciate a life that is still very much in progress.
 
 ## There is room for gratitude and an honest prayer
 
-The words "everything you need" deserve a little gentleness. People can be deeply grateful and still need food, safe housing, medical care, companionship, or help carrying an exhausting responsibility. Appreciation does not make those needs disappear.
+Gratitude deserves a little gentleness. People can be deeply grateful and still need food, safe housing, medical care, companionship, or help carrying an exhausting responsibility. Appreciation does not make those needs disappear.
 
 There is room to say, "Thank you, God, for what is good," and also, "I need help."
 

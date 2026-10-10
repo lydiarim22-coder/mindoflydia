@@ -4,7 +4,7 @@ title: "A Hard Day Doesn't Make Me a Bad Mom"
 category: motherhood
 description: "A reflection on losing patience, making room for repair, and hoping our children remember that they never had to struggle alone."
 ---
-> I can have a hard day and still be a good mom. I lose my patience. I second-guess myself. Sometimes I cry after everyone's asleep. But when my child needs me, I'm there. I hope they remember less about the days I struggled and more about how they never had to struggle alone.
+Parenting leaves room for mistakes, repair, and showing up when our children need support.
 
 Some evenings, the house finally gets quiet, and my mind starts replaying the day.
 
@@ -64,7 +64,7 @@ But I hope that, over time, my child feels comfortable bringing me the things th
 
 I hope they know I will listen before rushing to fix everything. That I will sit beside them when the answer takes time. That a difficult feeling can have a place in our home.
 
-That is what moves me most about these words: the hope that our children remember having someone beside them when life became difficult.
+I hope our children remember having someone beside them when life became difficult.
 
 ## A little gentleness for tonight
 

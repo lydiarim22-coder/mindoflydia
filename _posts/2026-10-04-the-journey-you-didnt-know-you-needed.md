@@ -4,9 +4,9 @@ title: "The Journey You Didn't Know You Needed"
 category: faith-and-life
 description: "A reflection on unexpected turns, changing relationships, and trusting God one step at a time when life looks different from what we planned."
 ---
-> Sometimes the universe takes you on a journey you didn't know you needed, to bring you everything you ever wanted. Trust the plan.
+Unexpected changes can lead to meaningful growth, even while the future remains uncertain.
 
-There is something hopeful about these words. They give us a way to imagine that an unexpected turn might lead somewhere worth going, even when we cannot see very far ahead.
+It can be comforting to imagine that an unexpected turn might lead somewhere worth going, even when we cannot see very far ahead.
 
 From a place of faith, I think about that hope as trusting God with the parts of life I cannot yet understand. I can make plans, work toward them, and still leave room for a future I have not pictured.
 
@@ -36,7 +36,7 @@ We can also choose what happens next. Trusting the plan leaves room to ask for h
 
 ## Leave room for a different kind of good
 
-The phrase "everything you ever wanted" feels beautiful, but I would hold it gently. Life does not promise every outcome we wish for. Some losses remain losses, and some questions stay unanswered.
+I would hold that hope gently. Life does not promise every outcome we wish for. Some losses remain losses, and some questions stay unanswered.
 
 Still, good things can arrive in forms we did not expect.
 

@@ -4,7 +4,7 @@ title: "The Gift of Helping Someone Feel Seen"
 category: mental-wellness
 description: "A reflection on everyday kindness, listening with care, and offering small reminders of goodness while honoring our own limits."
 ---
-> Be a good person with a huge heart. Tell people how much they mean to you. Compliment a stranger. Give when you can. Smile at someone just because. Be the person who makes people feel seen, heard, and validated. The one who people feel safe around. We might not be able to change someone's world, but we can remind them that there's still good on days when they struggle to see it. Leaving people better than you find them, even if only a little bit, is a beautiful gift to give.
+Small acts of kindness can help someone feel noticed and supported during a difficult day.
 
 Some days, a small kindness stays with us longer than the person who offered it could ever know.
 
@@ -12,7 +12,7 @@ Someone remembers to ask how an appointment went. A friend sends a message witho
 
 The rest of the day may still be difficult. But for a moment, we feel noticed. There is a little less distance between us and the people around us.
 
-These words make me think about how often we have an opportunity to offer that feeling to someone else.
+We often have an opportunity to offer that feeling to someone else.
 
 ## Say the good thing while you have the chance
 
@@ -64,7 +64,7 @@ Trust grows through those repeated choices. A person may come to know that they 
 
 ## Give what you can sustain
 
-The words "give when you can" deserve a little space.
+Generosity needs room for our own limits, too.
 
 Some days, we have time, energy, or resources to share. Other days, we are stretched thin ourselves. A generous heart still needs rest and support.
 
