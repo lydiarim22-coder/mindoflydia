@@ -1,0 +1,4 @@
+# Add only names, photos, and memories supplied by Lydia.
+# Each entry needs name. Optional: photo, photo_alt, years, memory, story_url.
+# When a photo is included, provide photo_alt and an existing local image path.
+[]
