@@ -199,3 +199,13 @@
   latitude: 33.502
   longitude: -117.663
   summary: "A past-trip destination in California."
+
+- id: solvang-california
+  name: Solvang
+  region: California
+  location: California, United States
+  country: USA
+  type: past
+  latitude: 34.595
+  longitude: -120.137
+  summary: "A past-trip destination in California."
