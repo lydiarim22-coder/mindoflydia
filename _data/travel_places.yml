@@ -209,3 +209,13 @@
   latitude: 34.595
   longitude: -120.137
   summary: "A past-trip destination in California."
+
+- id: palm-springs-california
+  name: Palm Springs
+  region: California
+  location: California, United States
+  country: USA
+  type: past
+  latitude: 33.830
+  longitude: -116.545
+  summary: "A past-trip destination in California."
