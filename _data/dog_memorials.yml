@@ -13,3 +13,7 @@
 
 - name: Gosoon
   breed: Tuxedo cat
+
+- name: "Unknown name"
+  breed: Kitten
+  memory: "A kitten who was mauled by a neighborhood dog. Remembered here with love."
