@@ -56,6 +56,7 @@ description: "Photos from Lydia's travels, home cooking, garden, and beloved dog
       <a href="{{ dog.photo | relative_url }}" aria-label="View full photo of {{ dog.name | escape }}"><img src="{{ dog.photo | relative_url }}" alt="{{ dog.photo_alt | escape }}" loading="lazy"></a>
       {% endif %}
       <h3>{{ dog.name | escape }}</h3>
+      {% if dog.breed %}<p>{{ dog.breed | escape }}</p>{% endif %}
       {% if dog.years %}<p>{{ dog.years | escape }}</p>{% endif %}
       {% if dog.memory %}<p>{{ dog.memory | escape }}</p>{% endif %}
       {% if dog.story_url %}<p><a href="{{ dog.story_url | relative_url }}">Read their story &rarr;</a></p>{% endif %}
