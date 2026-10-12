@@ -41,3 +41,7 @@
 
 - name: "Unknown name"
   breed: Poodle puppy
+
+- name: Nara
+  breed: Maltese
+  memory: "She had severe allergies and bad teeth."
