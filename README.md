@@ -195,3 +195,17 @@ The Korean Culture section at `/korean-culture/` groups posts by topic.
 Set `category: korean-culture` and `topic: food`, `beauty`, `dramas`, or
 `movies`, `music`, or `books` in a post's front matter. Posts without a topic appear under
 More Korean Culture. The Food section also links to From My Kitchen.
+
+## Movies & TV
+
+The `/movies-tv/` page organizes American titles into Movies and TV Shows.
+Add approved titles to `_data/movies_tv_items.yml` with `title`, `year`,
+optional `genre`, `topic: movies` or `topic: tv-shows`, and a short `note`.
+Titles sort by release year, newest first. No titles or ratings are invented.
+Add `review_url` only when the actual review exists; remove the coming-soon
+note when linking a finished review.
+
+To show one full review in both The Lydia Rating and Movies & TV, use
+`category: the-lydia-rating`, `review_section: movies-tv`, and either
+`topic: movies` or `topic: tv-shows` in its front matter. The page also
+supports posts with `category: movies-tv` and either topic.

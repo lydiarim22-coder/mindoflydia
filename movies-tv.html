@@ -1,0 +1,55 @@
+﻿---
+layout: default
+title: Movies & TV
+permalink: /movies-tv/
+description: "Explore American movies and TV shows with Lydia, with titles to discover and links to her reviews in The Lydia Rating."
+---
+<section class="page-intro shell">
+  <p class="eyebrow">Watching with Lydia</p>
+  <h1>Movies &amp; TV</h1>
+  <p>American movies and TV shows, memorable characters, and stories that stay with us.</p>
+</section>
+<section class="shell section compact">
+  <nav class="gallery-trip-links" aria-label="Movies and TV topics">
+    <a href="#movies">Movies</a>
+    <a href="#tv-shows">TV Shows</a>
+  </nav>
+  <p>Find my full reviews in <a href="{{ '/the-lydia-rating/' | relative_url }}">The Lydia Rating</a>. For Korean dramas and movies, visit <a href="{{ '/korean-culture/' | relative_url }}">Korean Culture</a>.</p>
+  {% assign topics = 'movies,tv-shows' | split: ',' %}
+  {% assign viewing_posts = site.posts | where: 'category', 'movies-tv' %}
+  {% assign rating_posts = site.posts | where: 'category', 'the-lydia-rating' | where: 'review_section', 'movies-tv' %}
+  {% assign viewing_posts = viewing_posts | concat: rating_posts | uniq | sort: 'date' | reverse %}
+  {% for topic in topics %}
+  <section class="culture-topic" id="{{ topic }}" aria-labelledby="viewing-{{ topic }}">
+    <h2 id="viewing-{{ topic }}">{% if topic == 'movies' %}Movies{% else %}TV Shows{% endif %}</h2>
+    {% assign topic_items = site.data.movies_tv_items | where: 'topic', topic | sort: 'year' | reverse %}
+    {% assign topic_posts = viewing_posts | where: 'topic', topic %}
+    {% if topic_items.size > 0 %}
+    <div class="post-grid">
+      {% for item in topic_items %}
+      <article class="post-card">
+        <p class="eyebrow">{{ item.year | escape }}{% if item.genre %} &middot; {{ item.genre | escape }}{% endif %}</p>
+        <h3>{% if item.review_url %}<a href="{{ item.review_url | relative_url }}">{{ item.title | escape }}</a>{% else %}{{ item.title | escape }}{% endif %}</h3>
+        {% if item.note %}<p>{{ item.note | escape }}</p>{% endif %}
+        {% if item.review_url %}<a class="text-link" href="{{ item.review_url | relative_url }}">Read my review &rarr;</a>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% if topic_posts.size > 0 %}
+    <div class="post-grid">
+      {% for post in topic_posts %}
+      <article class="post-card">
+        <p class="eyebrow">{{ post.date | date: '%B %-d, %Y' }}</p>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+        <p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 28 }}</p>
+        <a class="text-link" href="{{ post.url | relative_url }}">Read my review &rarr;</a>
+      </article>
+      {% endfor %}
+    </div>
+    {% elsif topic_items.size == 0 %}
+    <p class="gallery-empty">{% if topic == 'movies' %}Movie{% else %}TV show{% endif %} picks and reviews are coming soon.</p>
+    {% endif %}
+  </section>
+  {% endfor %}
+</section>
