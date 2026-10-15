@@ -35,6 +35,9 @@ description: "Explore Korean food, beauty, dramas, movies, music, and books with
     {% endcase %}
     {% if topic == 'food' %}<p><a href="{{ '/photo-gallery/' | relative_url }}#from-my-kitchen">Visit From My Kitchen &rarr;</a></p>{% endif %}
     {% assign topic_items = site.data.korean_culture_items | where: 'topic', topic %}
+    {% if topic == 'dramas' %}
+    {% assign topic_items = topic_items | sort: 'year' | reverse %}
+    {% endif %}
     {% if topic_items.size > 0 %}
     <div class="post-grid">
       {% for item in topic_items %}
