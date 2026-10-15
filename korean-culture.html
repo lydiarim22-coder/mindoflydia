@@ -42,7 +42,7 @@ description: "Explore Korean food, beauty, dramas, movies, music, and books with
     <div class="post-grid">
       {% for item in topic_items %}
       <article class="post-card">
-        <p class="eyebrow">{{ item.year | escape }} &middot; {{ item.genre | escape }}</p>
+        <p class="eyebrow">{{ item.year | escape }}{% if item.genre %} &middot; {{ item.genre | escape }}{% endif %}</p>
         <h3>{{ item.title | escape }}</h3>
         <p>{{ item.note | escape }}</p>
       </article>
