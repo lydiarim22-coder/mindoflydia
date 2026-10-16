@@ -198,7 +198,7 @@ More Korean Culture. The Food section also links to From My Kitchen.
 
 ## Movies & TV
 
-The `/movies-tv/` page organizes American titles into Movies and TV Shows.
+The `/movies-tv/` page organizes titles from around the world into Movies and TV Shows.
 Add approved titles to `_data/movies_tv_items.yml` with `title`, `year`,
 optional `genre`, `topic: movies` or `topic: tv-shows`, and a short `note`.
 Titles sort by release year, newest first. No titles or ratings are invented.
