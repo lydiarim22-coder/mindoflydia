@@ -209,3 +209,22 @@ To show one full review in both The Lydia Rating and Movies & TV, use
 `category: the-lydia-rating`, `review_section: movies-tv`, and either
 `topic: movies` or `topic: tv-shows` in its front matter. The page also
 supports posts with `category: movies-tv` and either topic.
+
+### Korean food labels
+
+Korean Culture Food has four groups: Dishes & Home Cooking, Snacks & Treats,
+Childhood Favorites, and Restaurants. Labels live in `_data/korean_food_labels.yml`.
+A post can appear in more than one group. Use this front matter for a food story:
+
+```yaml
+category: korean-culture
+topic: food
+food_labels:
+  - snacks-treats
+  - childhood-favorites
+```
+
+Other supported label IDs are `dishes-home-cooking` and `restaurants`.
+For a single review to appear in both The Lydia Rating and Korean Culture Food,
+use `category: the-lydia-rating`, `review_section: korean-culture`, `topic: food`,
+and the same `food_labels` list. Unlabelled food posts appear under More Korean Food.

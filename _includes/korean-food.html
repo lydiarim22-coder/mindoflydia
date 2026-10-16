@@ -1,0 +1,42 @@
+<p><a href="{{ '/photo-gallery/' | relative_url }}#from-my-kitchen">Visit From My Kitchen &rarr;</a></p>
+<nav class="gallery-trip-links" aria-label="Korean food labels">
+  {% for label in site.data.korean_food_labels %}
+  <a href="#food-{{ label.id }}">{{ label.name | escape }}</a>
+  {% endfor %}
+</nav>
+{% assign food_stories = site.posts | where: 'category', 'korean-culture' | where: 'topic', 'food' %}
+{% assign food_reviews = site.posts | where: 'category', 'the-lydia-rating' | where: 'review_section', 'korean-culture' | where: 'topic', 'food' %}
+{% assign food_stories = food_stories | concat: food_reviews | uniq | sort: 'date' | reverse %}
+{% for label in site.data.korean_food_labels %}
+<section class="culture-topic" id="food-{{ label.id }}" aria-labelledby="food-heading-{{ label.id }}">
+  <h3 id="food-heading-{{ label.id }}">{{ label.name | escape }}</h3>
+  <p>{{ label.description | escape }}</p>
+  {% assign label_posts = food_stories | where_exp: 'story', 'story.food_labels contains label.id' %}
+  {% if label_posts.size > 0 %}
+  <div class="post-grid">
+    {% for post in label_posts %}
+    {% include korean-food-card.html %}
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="gallery-empty">Stories are coming soon.</p>
+  {% endif %}
+</section>
+{% endfor %}
+{% assign unlabelled_cards = '' %}
+{% for post in food_stories %}
+  {% assign has_food_label = false %}
+  {% for label in site.data.korean_food_labels %}
+    {% if post.food_labels contains label.id %}{% assign has_food_label = true %}{% endif %}
+  {% endfor %}
+  {% unless has_food_label %}
+    {% capture food_card %}{% include korean-food-card.html %}{% endcapture %}
+    {% assign unlabelled_cards = unlabelled_cards | append: food_card %}
+  {% endunless %}
+{% endfor %}
+{% if unlabelled_cards != '' %}
+<section class="culture-topic" aria-labelledby="more-korean-food">
+  <h3 id="more-korean-food">More Korean Food</h3>
+  <div class="post-grid">{{ unlabelled_cards }}</div>
+</section>
+{% endif %}

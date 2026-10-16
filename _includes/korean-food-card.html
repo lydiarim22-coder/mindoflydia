@@ -1,0 +1,7 @@
+<article class="post-card">
+  <p class="eyebrow">{{ post.date | date: '%B %-d, %Y' }}</p>
+  <h4><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h4>
+  <p>{% for label in site.data.korean_food_labels %}{% if post.food_labels contains label.id %}<span>{{ label.name | escape }}</span><br>{% endif %}{% endfor %}</p>
+  <p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 28 }}</p>
+  <a class="text-link" href="{{ post.url | relative_url }}">{% if post.category == 'the-lydia-rating' %}Read my review{% else %}Read story{% endif %} &rarr;</a>
+</article>

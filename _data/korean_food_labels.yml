@@ -1,0 +1,12 @@
+- id: dishes-home-cooking
+  name: Dishes & Home Cooking
+  description: Korean dishes, recipes, and meals from my kitchen.
+- id: snacks-treats
+  name: Snacks & Treats
+  description: Korean snacks, sweets, and small bites to discover.
+- id: childhood-favorites
+  name: Childhood Favorites
+  description: Foods and flavors connected to childhood memories.
+- id: restaurants
+  name: Restaurants
+  description: Korean restaurant visits and links to my full reviews.
