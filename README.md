@@ -50,7 +50,7 @@ it is not medical advice or a substitute for care from a qualified professional.
 - Travel and photography
 - Purple Cloth Shop apparel
 - Purple Print Shop journals, sketchbooks, and print products
-- Projects We Love
+- Things We Love
 
 ## Site sections
 
@@ -63,7 +63,7 @@ it is not medical advice or a substitute for care from a qualified professional.
 - Travel
 - Faith & Life
 - Shop
-- Projects We Love
+- Things We Love
 - About
 - Contact
 

@@ -1,11 +1,11 @@
 ---
 layout: section
-title: Projects We Love
+title: Things We Love
 permalink: /projects-we-love/
 category: projects-we-love
-description: Creative ideas, helpful tools, and projects worth sharing with families.
+description: Favorite websites, our kids' art, and other things we love sharing.
 ---
-<p>A collection of projects and resources that support learning, creativity, and everyday family life.</p>
+<p>A collection of favorite websites, our kids' art, and other discoveries and creations we love sharing.</p>
 
 <h2>Fuselyn</h2>
 <p>From exploring colleges to keeping up with classes, Fuselyn brings together tools for each stage of a student's journey. Developed by <a href="https://katelandinc.com/">Kateland INC</a>, the suite helps students research their options, organize applications, explore universities abroad, and build a study routine once enrolled.</p>

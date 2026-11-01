@@ -24,7 +24,7 @@ permalink: /about/
       <li><a href="{{ '/faith-and-life/' | relative_url }}">Faith &amp; Life</a> — Reflections on faith, gratitude, relationships, personal growth, and finding meaning in ordinary days.</li>
       <li><a href="{{ '/korean-culture/' | relative_url }}">Korean Culture</a> — A growing space for Korean food, beauty, dramas, movies, music, and books.</li>
       <li><a href="{{ '/shop/' | relative_url }}">Shop</a> — Journals and paper goods from Purple Print Shop, along with apparel designs from Purple Cloth Shop, including item with a clickable product photo.</li>
-      <li><a href="{{ '/projects-we-love/' | relative_url }}">Projects We Love</a> — Creative work and projects worth sharing.</li>
+      <li><a href="{{ '/projects-we-love/' | relative_url }}">Things We Love</a> — Favorite websites, our kids' art, and other things worth sharing.</li>
     </ul>
     <p>Some sections are just beginning, and new stories and photographs will be added as this space grows. You can also <a href="{{ '/journal/' | relative_url }}">browse all stories</a> in one place.</p>
     <h2>From my home to yours</h2>
