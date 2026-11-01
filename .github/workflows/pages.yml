@@ -12,7 +12,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
@@ -22,6 +22,10 @@ jobs:
           destination: ./_site
       - name: Check rendered SEO and internal links
         run: python3 scripts/check_seo.py _site
+      - name: Set up Python for browser checks
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
       - name: Install travel map browser checks
         run: |
           python3 -m pip install playwright==1.55.0
@@ -40,7 +44,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: build
     steps:
       - id: deployment
